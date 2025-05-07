@@ -1,5 +1,15 @@
 {
-    "conventionalCommits.scopes": [
-        "global"
-    ]
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "cSpell.words": [
+    "lefthook",
+    "ngrx",
+    "primeicons",
+    "primeng",
+    "primeui"
+  ],
+  "conventionalCommits.scopes": [
+    "global"
+  ]
 }
