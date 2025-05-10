@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+	selector: "app-root",
+	imports: [RouterOutlet],
+	template: "<router-outlet />",
 })
 export class AppComponent {
-  title = 'R1C-Frontend-Challenge';
+	title = "R1C-Frontend-Challenge";
 }
