@@ -128,7 +128,12 @@ const R1CTheme: Preset<AuraBaseDesignTokens> = definePreset(Aura, {
 				},
 				formField: {
 					hoverBorderColor: "{primary.color}",
+					invalidBorderColor: "{red.500}",
+					borderColor: "#7F7F7F",
+					disabledColor: "#CCCCCC",
+					placeholderColor: "#7F7F7F",
 				},
+				text: {},
 			},
 		},
 		focusRing: {

@@ -11,6 +11,7 @@
     "topbar"
   ],
   "conventionalCommits.scopes": [
-    "global"
+    "global",
+    "routes"
   ]
 }
