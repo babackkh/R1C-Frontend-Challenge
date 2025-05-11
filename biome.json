@@ -30,10 +30,11 @@
 			"suspicious": {
 				"noConsoleLog": { "fix": "safe", "level": "error" },
 				"noDoubleEquals": { "fix": "safe", "level": "error", "options": { "ignoreNull": true } },
-				"noLabelVar": { "level": "error" }
+				"noLabelVar": { "level": "error" },
+				"noExplicitAny": "off"
 			}
 		},
-		"ignore": ["*.spec.ts"]
+		"ignore": ["*.spec.ts", "src/app/data-access/endpoints/*.ts"]
 	},
 	"javascript": {
 		"formatter": {
