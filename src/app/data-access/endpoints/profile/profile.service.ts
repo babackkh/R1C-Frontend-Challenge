@@ -5,7 +5,7 @@
  * Conduit API documentation
  * OpenAPI spec version: 1.0.0
  */
-import type { HttpClient } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import type { HttpResponse as AngularHttpResponse, HttpContext, HttpEvent, HttpHeaders, HttpParams } from "@angular/common/http";
 
 import { Injectable } from "@angular/core";
