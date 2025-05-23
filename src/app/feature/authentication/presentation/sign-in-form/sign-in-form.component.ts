@@ -11,7 +11,6 @@ import { RippleModule } from "primeng/ripple";
 	selector: "app-sign-in-form",
 	imports: [ButtonModule, CheckboxModule, InputTextModule, PasswordModule, FormsModule, RouterModule, RippleModule],
 	templateUrl: "./sign-in-form.component.html",
-	styleUrl: "./sign-in-form.component.scss",
 })
 export class SignInFormComponent {
 	email = signal<string>("");
