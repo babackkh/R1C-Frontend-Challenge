@@ -1,12 +1,13 @@
 import { definePreset } from "@primeng/themes";
 import Aura from "@primeng/themes/aura";
 import type { AuraBaseDesignTokens } from "@primeng/themes/aura/base";
-import type { Preset } from "@primeng/themes/types";
+import type { ComponentsDesignTokens, Preset } from "@primeng/themes/types";
 
-const R1CTheme: Preset<AuraBaseDesignTokens> = definePreset(Aura, {
+export const R1CTheme: Preset<AuraBaseDesignTokens> = definePreset(Aura, {
 	options: {
 		prefix: "rc",
-		darkModeSelector: ".r1c-dark",
+		//darkModeSelector: ".r1c-dark",
+		darkModeSelector: false || "none",
 		cssLayer: {
 			name: "primeng",
 			order: "theme, base, primeng",
@@ -83,7 +84,7 @@ const R1CTheme: Preset<AuraBaseDesignTokens> = definePreset(Aura, {
 				},
 				surface: {
 					0: "#ffffff",
-					50: "{zinc.50}",
+					50: "#f0f0f0",
 					100: "{zinc.100}",
 					200: "{zinc.200}",
 					300: "{zinc.300}",
@@ -92,104 +93,29 @@ const R1CTheme: Preset<AuraBaseDesignTokens> = definePreset(Aura, {
 					600: "{zinc.600}",
 					700: "{zinc.700}",
 					800: "{zinc.800}",
-					900: "{zinc.900}",
+					900: "#333333",
 					950: "{zinc.950}",
 				},
 				formField: {
 					hoverBorderColor: "{primary.color}",
-				},
-			},
-			dark: {
-				primary: {
-					color: "{teal.500}",
-					inverseColor: "{teal.950}",
-					hoverColor: "{teal.700}",
-					activeColor: "{teal.600}",
-				},
-				highlight: {
-					background: "rgba(250, 250, 250, .16)",
-					focusBackground: "rgba(250, 250, 250, .24)",
-					color: "rgba(255,255,255,.87)",
-					focusColor: "rgba(255,255,255,.87)",
-				},
-				surface: {
-					0: "#ffffff",
-					50: "{slate.50}",
-					100: "{slate.100}",
-					200: "{slate.200}",
-					300: "{slate.300}",
-					400: "{slate.400}",
-					500: "{slate.500}",
-					600: "{slate.600}",
-					700: "{slate.700}",
-					800: "{slate.800}",
-					900: "{slate.900}",
-					950: "{slate.950}",
-				},
-				formField: {
-					hoverBorderColor: "{primary.color}",
 					invalidBorderColor: "{red.500}",
-					borderColor: "#7F7F7F",
+					invalidPlaceholderColor: "{red.500}",
+					borderColor: "#CCCCCC",
 					disabledColor: "#CCCCCC",
 					placeholderColor: "#7F7F7F",
-				},
-				text: {},
-			},
-		},
-		focusRing: {
-			width: "1px",
-			style: "solid",
-			color: "{primary.color}",
-			offset: "1px",
-		},
-	},
-	components: {
-		button: {
-			colorScheme: {
-				light: {
-					root: {
-						primary: {
-							background: "{primary.color}",
-							hoverBackground: "{primary.hover.color}",
-							activeBackground: "{primary.active.color}",
-							borderColor: "{primary.color}",
-							hoverBorderColor: "{primary.hover.color}",
-							activeBorderColor: "{primary.active.color}",
-							color: "{highlight.color}",
-							hoverColor: "{highlight.color}",
-							activeColor: "{primary.contrast.color}",
-							focusRing: {
-								color: "{primary.color}",
-								shadow: "none",
-							},
-						},
-						secondary: {},
-					},
-				},
-				dark: {
-					root: {
-						primary: {
-							background: "{primary.color}",
-							hoverBackground: "{primary.hover.color}",
-							activeBackground: "{primary.active.color}",
-							borderColor: "{primary.color}",
-							hoverBorderColor: "{primary.hover.color}",
-							activeBorderColor: "{primary.active.color}",
-							color: "{highlight.color}",
-							hoverColor: "{highlight.color}",
-							activeColor: "{primary.contrast.color}",
-							focusRing: {
-								color: "{primary.color}",
-
-								shadow: "none",
-							},
-						},
-						secondary: {},
-					},
+					background: "#ffffff",
+					filledBackground: "#ffffff",
+					color: "#333333",
 				},
 			},
+		},
+		formField: {
+			borderRadius: "8px",
+			paddingY: "0.758rem",
 		},
 	},
 } as AuraBaseDesignTokens);
 
-export default R1CTheme;
+export const simpleMessageDt: ComponentsDesignTokens["message"] = {
+	error: { simple: { color: "{red.500}" } },
+};

@@ -1,9 +1,11 @@
 import { Component } from "@angular/core";
-import { RouterOutlet } from "@angular/router";
+import { SignUpFormComponent } from "../../presentation/sign-up-form/sign-up-form.component";
 
 @Component({
 	selector: "app-sign-up-container",
-	imports: [RouterOutlet],
-	template: "<router-outlet/>",
+	imports: [SignUpFormComponent],
+	template: `<app-sign-up-form [isLoading]="false" (submit)="onSubmit($event)"/>`,
 })
-export class SignUpContainerComponent {}
+export class SignUpContainerComponent {
+	onSubmit(formValue: any): void {}
+}

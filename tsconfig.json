@@ -17,6 +17,12 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
+    "paths": {
+      "@data-access/*": ["./src/app/data-access/*"],
+      "@core/*": ["./src/app/core/*"],
+      "@feature/*": ["./src/app/feature/*"],
+      "@theme": ["./src/r1c-theme.ts"],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

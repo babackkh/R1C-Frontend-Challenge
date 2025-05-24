@@ -8,7 +8,6 @@ export const authenticationRoutes: Routes = [
 			return m.AuthenticationShellComponent;
 		},
 		children: [
-			{ path: "", pathMatch: "full", redirectTo: "all" },
 			{
 				path: "sign-in",
 				loadComponent: async () => {
@@ -23,6 +22,7 @@ export const authenticationRoutes: Routes = [
 					return m.SignUpContainerComponent;
 				},
 			},
+			{ path: "", pathMatch: "full", redirectTo: "sign-in" },
 		],
 	},
 ];
